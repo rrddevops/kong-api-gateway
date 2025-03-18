@@ -80,3 +80,13 @@ Add plugin Prometheus nos plugins globais
 Add no grafana Data sources Protmetheus (http://prometheus:9090)
 Importe dashboard Grafana .json
 https://grafana.com/grafana/dashboards/7424-kong-official/
+
+Casos de uso: 
+Em situações que quero expor conteúdos estáticos alguns hosts para atender a resilêcia uso um Load Balancer;
+Quando manter um unico endereço de internet, mas expor algumas aplicações com rotas (/pedidos, /chamados etc), devo usar um proxy reverso (NGINX);
+Em sitações que quero expor aplicações REST (json) ou WSDL (xml), plugins de controles (rate limit), devo usar um API gateway. 
+
+Cenário prático - Se você tem um sistema de microserviços, pode usar:
+Load Balancer para distribuir tráfego entre instâncias da aplicação.
+NGINX como proxy reverso para rotear chamadas internas.
+API Gateway para expor as APIs ao público e gerenciar autenticação.
